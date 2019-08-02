@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+# from __future__ import unicode_literals
 
-from django.shortcuts import render
-from django.conf.urls import url
+# from django.shortcuts import render
 
-from . import views
+from django.http import HttpResponse
 
-urlpatterns = [
-    url(r'^$', views.index, name='index')
-]
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
